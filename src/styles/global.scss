@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+/*custom width*/
+.a-g-global-w-29{
+    width: 29em;
+}
+
+/*custom line height*/
+.a-g-global-lh-0{
+    line-height: 0;
+}
+.a-g-global-ls-1p2-imp{
+    line-height: 1.2 !important;
+}
+/*custom size*/
+.a-g-global-small-checkbox{
+    width: .75em !important;
+    height: .75em !important;
+    .appkiticon{
+        font-size: .425em !important;
+        left:40% !important;
+    }
+}
+.a-header .a-g-global-divider-large{
+    height: 2.25rem;
+}

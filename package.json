@@ -1,28 +1,39 @@
 {
-  "name": "notes",
+  "name": "appeals-grievances-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-amplify": "^2.2.0",
-    "aws-amplify-react": "^3.1.1",
-    "bootstrap": "^4.4.1",
-    "kind-of": "^6.0.3",
-    "lodash": "^4.17.19",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
+    "@flowjs/flow.js": "^2.13.1",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "serialize-javascript": "^3.1.0",
-    "node-forge": "^0.10.0",
-    "object-path": "^0.11.5",
-    "immer": "^8.0.1"
-  },
-  "resolutions": {
-    "set-value": "^2.0.1",
-    "mixin-deep": "^1.3.2",
-    "lodash.template": "4.5.0",
-    "lodash": "^4.17.19",
-    "node-notifier": "^8.0.1"
+    "bootstrap": "^4.4.0",
+    "d3": "^5.7.0",
+    "d3-transition": "^1.1.3",
+    "focus-trap": "^5.0.1",
+    "history": "^5.0.0",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-touch-punch-amd": "^1.0.1",
+    "list.js": "^1.5.0",
+    "moment": "^2.22.2",
+    "node-sass": "^5.0.0",
+    "popper.js": "^1.14.4",
+    "primer-tooltips": "^1.5.7",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass-rem": "^2.0.1",
+    "web-vitals": "^1.1.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,12 +42,21 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

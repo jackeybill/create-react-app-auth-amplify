@@ -1,0 +1,210 @@
+@import './styles/global.scss';
+@import './styles/element.scss';
+@import './styles/layout.scss';
+
+
+
+
+
+
+
+/*layout*/
+.no-outline :focus,
+    .no-outline a:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .no-outline .tab-item:focus {
+        box-shadow: none !important;
+    }
+
+    /* reduced 571px from all media queries for full screen template */
+    .height-500 {
+        height: 31.25rem;
+    }
+
+    .height-350 {
+        height: 21.875rem;
+    }
+
+    .height-50 {
+        height: 3.125rem;
+    }
+
+    .a-nav-toggler-icon-wrapper {
+        min-width: 1.25rem;
+    }
+
+    .a-template-container {
+        background-color: var(--theme-color-content);
+        min-width: 28.125rem;
+    }
+
+    @media screen and (max-width: 47.9375rem) {
+        #a-hfn-search-bar-small {
+            flex-basis: 25%;
+        }
+    }
+
+    @media screen and (max-width: 38.6875rem) {
+        #a-hfn-search-bar-small {
+            display: none;
+            flex-basis: 100%;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        .a-header-set {
+            margin-left: auto;
+        }
+
+        .divider.d-sm-inline-block {
+            display: none !important;
+        }
+    }
+
+    .a-header {
+        min-width: 28.125rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    #search-icon-sm {
+        display: inline-block;
+    }
+
+    @media screen and (min-width: 38.75rem) {
+        #search-icon-sm {
+            display: none !important;
+        }
+
+        #a-hfn-search-bar-small {
+            display: block !important;
+        }
+
+        .a-order-sm-1 {
+            order: 1 !important;
+        }
+
+        .a-order-sm-2 {
+            order: 2 !important;
+        }
+
+        .a-order-sm-3 {
+            order: 3 !important;
+        }
+    }
+
+    @media screen and (max-width: 61.9375rem) {
+        .a-hfn-menu-container {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+
+        #hfn-content-container.a-template-content {
+            min-height: calc(100vh - 9.375rem);
+        }
+    }
+
+    @media screen and (min-width: 62rem) {
+        .a-hfn-menu-container {
+            min-width: 32rem;
+        }
+    }
+
+    .a-header .link-icon .icon-grid-view-outline {
+        padding: .4375rem;
+    }
+
+    .a-hfn-menu-container .a-tab-header .tab-item {
+        height: 3.125rem !important;
+        line-height: 3.125rem !important;
+        margin-top: 0;
+    }
+
+    .a-template-content {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: calc(100vh - 5.625rem);
+    }
+
+    .footer-wrapper {
+        position: relative;
+    }
+
+    /* Prefer to use mixins in scss for below css */
+    /* Supporting IE 11 */
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .a-header {
+            position: fixed;
+        }
+
+        #hfn-content-container.a-template-content {
+            padding-top: 3.125rem;
+            transition-duration: 1s;
+            min-height: calc(100vh - 2.5rem);
+        }
+
+        .hfn-pt-150,
+        #hfn-content-container.hfn-pt-150 {
+            padding-top: 9.375rem;
+        }
+
+        @media screen and (max-width: 61.9375rem) {
+            #hfn-content-container.a-template-content {
+                padding-top: 6.25rem;
+            }
+        }
+    }
+
+    /* Supporting Edge 12 -15 */
+    @supports (-ms-accelerator:true) {
+        .a-header {
+            position: fixed;
+        }
+
+        #hfn-content-container.a-template-content {
+            padding-top: 3.125rem;
+            transition-duration: 1s;
+            min-height: calc(100vh - 2.5rem);
+        }
+
+        .hfn-pt-150,
+        #hfn-content-container.hfn-pt-150 {
+            padding-top: 9.375rem;
+        }
+
+        @media screen and (max-width: 61.9375rem) {
+            #hfn-content-container.a-template-content {
+                padding-top: 6.25rem;
+            }
+        }
+    }
+
+    /* Supporting Edge 16+ */
+    @supports (-ms-ime-align:auto) {
+        .a-header {
+            position: fixed;
+        }
+
+        #hfn-content-container.a-template-content {
+            padding-top: 3.125rem;
+            transition-duration: 1s;
+            min-height: calc(100vh - 2.5rem);
+        }
+
+        .hfn-pt-150,
+        #hfn-content-container.hfn-pt-150 {
+            padding-top: 9.375rem;
+        }
+
+        @media screen and (max-width: 61.9375rem) {
+            #hfn-content-container.a-template-content {
+                padding-top: 6.25rem;
+            }
+        }
+    }

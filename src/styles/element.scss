@@ -1,0 +1,120 @@
+@import './variables.scss';
+
+/*Logo*/
+.a-g-logo{
+    height: 2.5em;
+}
+/*field label*/
+.a-g-field-label{
+    text-transform: uppercase;
+    text-align: left;
+}
+
+%base-tab-item-before{
+    content: "";
+    height: 0.125rem;
+    width: 1.5rem !important;
+    position: absolute;
+    top: 50% !important;
+    left: -15% !important;
+    transform: rotate(90deg)!important;
+}
+
+.a-g-responsive-nav{
+    max-width: 100%;
+    border-radius: .125rem;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    .a-tab-header {
+        height: 2.125rem;
+        position: relative;
+        &:not(.a-move):before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: .125rem;
+            border-radius: .25rem;
+            left: 0;
+            background-color: var(--theme-color-tabborder); // bottom border
+        }
+    }
+    .tab-item{
+        float: left;
+        width: auto;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: .875rem;
+        &.active{
+            position: relative;
+            &:before {
+                content: "";
+                height: .125rem;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: var(--theme-color-control);;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.a-g-secondary-custom-tab{
+    .a-tab{
+        
+        &:before, .a-active-bar{
+            background-color: transparent
+        }
+        .a-tab-item{
+            color: $color-black;
+
+            &:not(.active):before {
+                @extend %base-tab-item-before;
+                background-color: $color-medium-grey;
+            }
+
+            &.active
+            {
+                color: $color-primary;
+                outline: none;
+
+                &:before {
+                    @extend %base-tab-item-before;
+                    background-color: $color-primary;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.a-g-date-picker{
+    .a-text-input{
+        height: 2.25rem;
+    }
+}
+
+.SumoSelect.a-select>.CaptionCont{
+    background-color: $color-secondary-field-bg;
+    border-radius: .125rem;
+    border: .0625rem solid  $color-secondary-field-border;
+  }
+
+  .form-control:focus {
+    border: none;
+    box-shadow: 0 0 0 .125rem $color-primary;
+    background-color: $color-white !important;
+    outline: 0;
+}
+
+.a-g-file-upload {
+    min-height: 20rem;
+}
